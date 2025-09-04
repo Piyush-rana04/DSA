@@ -1,8 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
+void pattern1(int n){
+    for(int i=0;i<=n;i++){
+        for(int j=0;j<=5;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+
 
 int main() {
-    cout << "Hello DSA in Codespaces!" << endl;
-    cout<< "hello world" << endl;
-    return 0;
+    pattern1(5);
 }
