@@ -85,7 +85,33 @@ void pattern9(int n){
     pattern7(n);
     pattern8(n);
 }
+void pattern10(int n){
+    for(int i=0;i<n;i++){
+        for(int j=0; j<=i ;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }for(int i=n;i>=0;i--){
+        for(int j=1;j<i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
 
+    }
+} 
+void pattern11(int n){
+    int start =1;
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+            start=1;
+        }
+        else start=0;
+        for(int j=0; j<=i ;j++){
+            cout<<start;
+            start=1-start;
+        }cout<<endl;
+    }
+}  
 int main(){
-    pattern9(5);
+    pattern11(5);
 }
