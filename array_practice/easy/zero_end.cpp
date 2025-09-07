@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> moveleft(vector<int>&arr,int size){
-    int temp=0;
-    temp=arr[0];
-    for(int i=1;i<arr.size()-1;i++){
-        arr[i-1]=arr[i];
+vector<int> zero(vector<int>&arr,int size){
+    for(int i=0;i<arr.size();i++){
+        if(arr[i]==0){
+            arr.erase(arr.begin()+i);
+            arr.push_back(0);
+        }
         
-    }arr[size-1]=temp;
+    }
     return arr;
 }
 
@@ -16,8 +17,8 @@ void print(vector<int>arr){
     }
 }
 int main(){
-    vector<int>arr={1,2,2,3,4,4,5,6,6};
+    vector<int>arr={0,1,2,3,0,4,5,0,6};
     int size=9;
-    moveleft(arr,size);
-    print(moveleft(arr,size));
+    zero(arr,size);
+    print(zero(arr,size));
 }
