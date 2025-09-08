@@ -17,7 +17,6 @@ void print(vector<int>arr){
 }
 int main(){
     vector<int>arr={1,2,3,4,5,6,7,8,9};
-    int size=9;
     rotate(arr,size);
     print(arr);
 }
